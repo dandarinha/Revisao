@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->integer('quantidade');
             $table->date('data_movimentacao');
-            $table->enum('tipo-movimentacao', ['ENTRADA', 'SAIDA']);
+            $table->enum('tipo', ['ENTRADA', 'SAIDA']);
             $table->foreignId('user_id')->constrained();
             $table->foreignId('produto_id')->constrained();
             $table->timestamps();
