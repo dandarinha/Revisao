@@ -18,7 +18,7 @@ class MovimentacaoCreate extends Component
     public function mount()
     {
         $this->produtos = Produto::orderBy('nome')->get();
-        $this->data_movimentacao = now()->format('Y-m=d');
+        $this->data_movimentacao = now()->format('d-m-Y');
     }
 
 

@@ -22,7 +22,7 @@ class MovimentacaoIndex extends Component
     public function render()
     {
         $movimentacaos = Movimentacao::where('tipo', 'like', '%'.$this->search.'%' )->get();
-         return view('livewire.movimentacao.movimentacao-index');
+         return view('livewire.movimentacao.movimentacao-index', compact('movimentacaos'));
     }
 
 }
